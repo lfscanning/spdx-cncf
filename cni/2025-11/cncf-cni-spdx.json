@@ -1,0 +1,1889 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "creationInfo": {
+        "created": "2026-01-27T19:28:10Z",
+        "creators": [
+            "Tool: protobom-v0.0.0-20250416155525-64c0c744777d+dirty",
+            "Tool: trivy-dev",
+            "Organization: aquasecurity",
+            "Organization: Linux Foundation",
+            "Tool: Scaffold",
+            "Tool: Parlay"
+        ],
+        "licenseListVersion": "3.20"
+    },
+    "dataLicense": "CC0-1.0",
+    "name": "/tmp/tmpcjypp0b3/code",
+    "spdxVersion": "SPDX-2.3",
+    "documentNamespace": "http://trivy.dev/filesystem//tmp/tmpcjypp0b3/code-b9966fb4-067d-4cd1-a8bd-fc7b9ac1acc1",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-Application-cb29fc947ca39e9b",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "NONE",
+            "licenseDeclared": "NONE",
+            "name": "cni/go.mod",
+            "primaryPackagePurpose": "APPLICATION",
+            "supplier": "Organization: Linux Foundation Project cncf",
+            "versionInfo": "1d67f89a2e3cfc3c22da74d4f8490e65ca4a819c"
+        },
+        {
+            "SPDXID": "SPDXRef-Application-21c7ef0e0f301999",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "NONE",
+            "licenseDeclared": "NONE",
+            "name": "cni/plugins/debug/go.mod",
+            "primaryPackagePurpose": "APPLICATION",
+            "supplier": "Organization: Linux Foundation Project cncf",
+            "versionInfo": "1d67f89a2e3cfc3c22da74d4f8490e65ca4a819c"
+        },
+        {
+            "SPDXID": "SPDXRef-Application-5729e2edc4de9a9a",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "NONE",
+            "licenseDeclared": "NONE",
+            "name": "plugins/go.mod",
+            "primaryPackagePurpose": "APPLICATION",
+            "supplier": "Organization: Linux Foundation Project cncf",
+            "versionInfo": "9b3772e1a7abf93cbb7c6526a28bc0d27b830e02"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-5a622b098115711a",
+            "description": "Package semver provides the ability to work with Semantic Versions (http://semver.org) in Go.\n\nSpecifically it provides the ability to:\n\nThere are two functions that can parse semantic versions. The `StrictNewVersion`\nfunction only parses valid version 2 semantic versions as outlined in the\nspecification. The `NewVersion` function attempts to coerce a version into a\nsemantic version and parse it. For example, if there is a leading v or a version\nlisted without all 3 parts (e.g. 1.2) it will attempt to coerce it into a valid\nsemantic version (e.g., 1.2.0). In both cases a `Version` object is returned\nthat can be sorted, compared, and used in constraints.\n\nWhen parsing a version an optional error can be returned if there is an issue\nparsing the version. For example,\n\nThe version object has methods to get the parts of the version, compare it to\nother versions, convert the version back into a string, and get the original\nstring. For more details please see the documentation\nat https://godoc.org/github.com/Masterminds/semver.\n\nA set of versions can be sorted using the `sort` package from the standard library.\nFor example,\n\nThere are two methods for comparing versions. One uses comparison methods on\n`Version` instances and the other is using Constraints. There are some important\ndifferences to notes between these two methods of comparison.\n\nThere are differences between the two methods or checking versions because the\ncomparison methods on `Version` follow the specification while comparison ranges\nare not part of the specification. Different packages and tools have taken it\nupon themselves to come up with range rules. This has resulted in differences.\nFor example, npm/js and Cargo/Rust follow similar patterns which PHP has a\ndifferent pattern for ^. The comparison features in this package follow the\nnpm/js and Cargo/Rust lead because applications using it have followed similar\npatters with their versions.\n\nChecking a version against version constraints is one of the most featureful\nparts of the package.\n\nThere are two elements to the comparisons. First, a comparison string is a list\nof comma or space separated AND comparisons. These are then separated by || (OR)\ncomparisons. For example, `\">= 1.2 < 3.0.0 || >= 4.2.3\"` is looking for a\ncomparison that's greater than or equal to 1.2 and less than 3.0.0 or is\ngreater than or equal to 4.2.3. This can also be written as\n`\">= 1.2, < 3.0.0 || >= 4.2.3\"`\n\nThe basic comparisons are:\n\nThere are multiple methods to handle ranges and the first is hyphens ranges.\nThese look like:\n\nThe `x`, `X`, and `*` characters can be used as a wildcard character. This works\nfor all comparison operators. When used on the `=` operator it falls\nback to the tilde operation. For example,\n\nTilde Range Comparisons (Patch)\n\nThe tilde (`~`) comparison operator is for patch level ranges when a minor\nversion is specified and major level changes when the minor number is missing.\nFor example,\n\nCaret Range Comparisons (Major)\n\nThe caret (`^`) comparison operator is for major level changes once a stable\n(1.0.0) release has occurred. Prior to a 1.0.0 release the minor versions acts\nas the API stability level. This is useful when comparisons of API versions as a\nmajor change is API breaking. For example,\n\nIn addition to testing a version against a constraint, a version can be validated\nagainst a constraint. When validation fails a slice of errors containing why a\nversion didn't meet the constraint is returned. For example,",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/masterminds/semver/v3@v3.4.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/Masterminds/semver",
+            "licenseConcluded": "MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/Masterminds/semver/v3",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Masterminds",
+            "versionInfo": "v3.4.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-ecc063c24fd67f59",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/microsoft/go-winio@v0.6.2",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/microsoft/go-winio",
+            "licenseConcluded": "BSD-3-Clause AND MIT AND NOASSERTION",
+            "licenseDeclared": "MIT",
+            "name": "github.com/Microsoft/go-winio",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Microsoft",
+            "versionInfo": "v0.6.2"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-b162dd03b91d57b6",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/microsoft/hcsshim@v0.13.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/microsoft/hcsshim",
+            "licenseConcluded": "Apache-2.0 AND LicenseRef-scancode-generic-cla AND LicenseRef-scancode-dco-1.1 AND MIT",
+            "licenseDeclared": "LicenseRef-scancode-dco-1.1 AND LicenseRef-scancode-generic-cla AND MIT",
+            "name": "github.com/Microsoft/hcsshim",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Microsoft",
+            "versionInfo": "v0.13.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-1da011f8a9ece165",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/alexflint/go-filemutex@v1.3.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/alexflint/go-filemutex",
+            "licenseConcluded": "BSD-3-Clause AND MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/alexflint/go-filemutex",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: K\u014dshin Alex Flint",
+            "versionInfo": "v1.3.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-ddb674046c968d63",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/buger/jsonparser@v1.1.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/buger/jsonparser",
+            "licenseConcluded": "MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/buger/jsonparser",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Leonid Bugaev",
+            "versionInfo": "v1.1.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-89d03928d3b27efd",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/containerd/cgroups/v3@v3.0.3",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/containerd/cgroups",
+            "licenseConcluded": "Apache-2.0 AND Apache-2.0 AND LGPL-3.0-only",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/containerd/cgroups/v3",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: containerd",
+            "versionInfo": "v3.0.3"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-d7d5cd70153403a5",
+            "description": "Package errdefs defines the common errors used throughout containerd\npackages.\n\nUse with fmt.Errorf to add context to an error.\n\nTo detect an error class, use the IsXXX functions to tell whether an error\nis of a certain type.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/containerd/errdefs@v0.3.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/containerd/errdefs",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/containerd/errdefs",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v0.3.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-60294d02b4fa504b",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/containerd/errdefs/pkg@v0.3.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/containerd/errdefs",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/containerd/errdefs/pkg",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: containerd",
+            "versionInfo": "v0.3.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-c87a2a8a63514c7e",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/containerd/typeurl/v2@v2.2.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/containerd/typeurl",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/containerd/typeurl/v2",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: containerd",
+            "versionInfo": "v2.2.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/containernetworking/cni",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/containernetworking/cni",
+            "licenseConcluded": "NONE",
+            "licenseDeclared": "NONE",
+            "name": "github.com/containernetworking/cni",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: CNI"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-d3b9caf8ea5fb371",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/containernetworking/cni@v1.3.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/containernetworking/cni",
+            "licenseConcluded": "Apache-2.0 AND LicenseRef-scancode-dco-1.1",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/containernetworking/cni",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: CNI",
+            "versionInfo": "v1.3.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-6a42f531f68042f4",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/containernetworking/cni/plugins/debug",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/containernetworking/cni",
+            "licenseConcluded": "NONE",
+            "licenseDeclared": "NONE",
+            "name": "github.com/containernetworking/cni/plugins/debug",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/plugins/debug/go.mod"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-24aa2275c15f4c6a",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/containernetworking/plugins",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/containernetworking/plugins",
+            "licenseConcluded": "NONE",
+            "licenseDeclared": "NONE",
+            "name": "github.com/containernetworking/plugins",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: CNI"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-a0bbca957cd19d04",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/containernetworking/plugins@v1.4.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/containernetworking/plugins",
+            "licenseConcluded": "Apache-2.0 AND NOASSERTION",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/containernetworking/plugins",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/plugins/debug/go.mod",
+            "supplier": "Organization: CNI",
+            "versionInfo": "v1.4.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-d752623552ba9492",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/coreos/go-iptables@v0.8.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/coreos/go-iptables",
+            "licenseConcluded": "Apache-2.0 AND NOASSERTION",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/coreos/go-iptables",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: CoreOS",
+            "versionInfo": "v0.8.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-d361789b13babfb1",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/coreos/go-systemd/v22@v22.6.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/coreos/go-systemd",
+            "licenseConcluded": "Apache-2.0 AND LicenseRef-scancode-dco-1.1",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/coreos/go-systemd/v22",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: CoreOS",
+            "versionInfo": "v22.6.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-1b0a60773dbe4111",
+            "description": "Package logr defines a general-purpose logging API and abstract interfaces\nto back that API.  Packages in the Go ecosystem can depend on this package,\nwhile callers can implement logging with whatever backend is appropriate.\n\nLogging is done using a Logger instance.  Logger is a concrete type with\nmethods, which defers the actual logging to a LogSink interface.  The main\nmethods of Logger are Info() and Error().  Arguments to Info() and Error()\nare key/value pairs rather than printf-style formatted strings, emphasizing\n\"structured logging\".\n\nWith Go's standard log package, we might write:\n\nWith logr's structured logging, we'd write:\n\nErrors are much the same.  Instead of:\n\nWe'd write:\n\nInfo() and Error() are very similar, but they are separate methods so that\nLogSink implementations can choose to do things like attach additional\ninformation (such as stack traces) on calls to Error(). Error() messages are\nalways logged, regardless of the current verbosity.  If there is no error\ninstance available, passing nil is valid.\n\nOften we want to log information only when the application in \"verbose\nmode\".  To write log lines that are more verbose, Logger has a V() method.\nThe higher the V-level of a log line, the less critical it is considered.\nLog-lines with V-levels that are not enabled (as per the LogSink) will not\nbe written.  Level V(0) is the default, and logger.V(0).Info() has the same\nmeaning as logger.Info().  Negative V-levels have the same meaning as V(0).\nError messages do not have a verbosity level and are always logged.\n\nWhere we might have written:\n\nWe can write:\n\nLogger instances can have name strings so that all messages logged through\nthat instance have additional context.  For example, you might want to add\na subsystem name:\n\nThe WithName() method returns a new Logger, which can be passed to\nconstructors or other functions for further use.  Repeated use of WithName()\nwill accumulate name \"segments\".  These name segments will be joined in some\nway by the LogSink implementation.  It is strongly recommended that name\nsegments contain simple identifiers (letters, digits, and hyphen), and do\nnot contain characters that could muddle the log output or confuse the\njoining operation (e.g. whitespace, commas, periods, slashes, brackets,\nquotes, etc).\n\nLogger instances can store any number of key/value pairs, which will be\nlogged alongside all messages logged through that instance.  For example,\nyou might want to create a Logger instance per managed object:\n\nWith the standard log package, we might write:\n\nWith logr we'd write:\n\nLogger has very few hard rules, with the goal that LogSink implementations\nmight have a lot of freedom to differentiate.  There are, however, some\nthings to consider.\n\nThe log message consists of a constant message attached to the log line.\nThis should generally be a simple description of what's occurring, and should\nnever be a format string.  Variable information can then be attached using\nnamed values.\n\nKeys are arbitrary strings, but should generally be constant values.  Values\nmay be any Go value, but how the value is formatted is determined by the\nLogSink implementation.\n\nLogger instances are meant to be passed around by value. Code that receives\nsuch a value can call its methods without having to check whether the\ninstance is ready for use.\n\nThe zero logger (= Logger{}) is identical to Discard() and discards all log\nentries. Code that receives a Logger by value can simply call it, the methods\nwill never crash. For cases where passing a logger is optional, a pointer to Logger\nshould be used.\n\nKeys are not strictly required to conform to any specification or regex, but\nit is recommended that they:\n\nThese guidelines help ensure that log data is processed properly regardless\nof the log implementation.  For example, log implementations will try to\noutput JSON data or will store data for later database (e.g. SQL) queries.\n\nWhile users are generally free to use key names of their choice, it's\ngenerally best to avoid using the following keys, as they're frequently used\nby implementations:\n\nImplementations are encouraged to make use of these keys to represent the\nabove concepts, when necessary (for example, in a pure-JSON output form, it\nwould be necessary to represent at least message and timestamp as ordinary\nnamed values).\n\nImplementations may choose to give callers access to the underlying\nlogging implementation.  The recommended pattern for this is:\n\nLogger grants access to the sink to enable type assertions like this:\n\nCustom `With*` functions can be implemented by copying the complete\nLogger struct and replacing the sink in the copy:\n\nDon't use New to construct a new Logger with a LogSink retrieved from an\nexisting Logger. Source code attribution might not work correctly and\nunexported fields in Logger get lost.\n\nBeware that the same LogSink instance may be shared by different logger\ninstances. Calling functions that modify the LogSink will affect all of\nthose.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/go-logr/logr@v1.4.2",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/go-logr/logr",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/go-logr/logr",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: go-logr",
+            "versionInfo": "v1.4.2"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-a70baa15054f185e",
+            "description": "Package logr defines a general-purpose logging API and abstract interfaces\nto back that API.  Packages in the Go ecosystem can depend on this package,\nwhile callers can implement logging with whatever backend is appropriate.\n\nLogging is done using a Logger instance.  Logger is a concrete type with\nmethods, which defers the actual logging to a LogSink interface.  The main\nmethods of Logger are Info() and Error().  Arguments to Info() and Error()\nare key/value pairs rather than printf-style formatted strings, emphasizing\n\"structured logging\".\n\nWith Go's standard log package, we might write:\n\nWith logr's structured logging, we'd write:\n\nErrors are much the same.  Instead of:\n\nWe'd write:\n\nInfo() and Error() are very similar, but they are separate methods so that\nLogSink implementations can choose to do things like attach additional\ninformation (such as stack traces) on calls to Error(). Error() messages are\nalways logged, regardless of the current verbosity.  If there is no error\ninstance available, passing nil is valid.\n\nOften we want to log information only when the application in \"verbose\nmode\".  To write log lines that are more verbose, Logger has a V() method.\nThe higher the V-level of a log line, the less critical it is considered.\nLog-lines with V-levels that are not enabled (as per the LogSink) will not\nbe written.  Level V(0) is the default, and logger.V(0).Info() has the same\nmeaning as logger.Info().  Negative V-levels have the same meaning as V(0).\nError messages do not have a verbosity level and are always logged.\n\nWhere we might have written:\n\nWe can write:\n\nLogger instances can have name strings so that all messages logged through\nthat instance have additional context.  For example, you might want to add\na subsystem name:\n\nThe WithName() method returns a new Logger, which can be passed to\nconstructors or other functions for further use.  Repeated use of WithName()\nwill accumulate name \"segments\".  These name segments will be joined in some\nway by the LogSink implementation.  It is strongly recommended that name\nsegments contain simple identifiers (letters, digits, and hyphen), and do\nnot contain characters that could muddle the log output or confuse the\njoining operation (e.g. whitespace, commas, periods, slashes, brackets,\nquotes, etc).\n\nLogger instances can store any number of key/value pairs, which will be\nlogged alongside all messages logged through that instance.  For example,\nyou might want to create a Logger instance per managed object:\n\nWith the standard log package, we might write:\n\nWith logr we'd write:\n\nLogger has very few hard rules, with the goal that LogSink implementations\nmight have a lot of freedom to differentiate.  There are, however, some\nthings to consider.\n\nThe log message consists of a constant message attached to the log line.\nThis should generally be a simple description of what's occurring, and should\nnever be a format string.  Variable information can then be attached using\nnamed values.\n\nKeys are arbitrary strings, but should generally be constant values.  Values\nmay be any Go value, but how the value is formatted is determined by the\nLogSink implementation.\n\nLogger instances are meant to be passed around by value. Code that receives\nsuch a value can call its methods without having to check whether the\ninstance is ready for use.\n\nThe zero logger (= Logger{}) is identical to Discard() and discards all log\nentries. Code that receives a Logger by value can simply call it, the methods\nwill never crash. For cases where passing a logger is optional, a pointer to Logger\nshould be used.\n\nKeys are not strictly required to conform to any specification or regex, but\nit is recommended that they:\n\nThese guidelines help ensure that log data is processed properly regardless\nof the log implementation.  For example, log implementations will try to\noutput JSON data or will store data for later database (e.g. SQL) queries.\n\nWhile users are generally free to use key names of their choice, it's\ngenerally best to avoid using the following keys, as they're frequently used\nby implementations:\n\nImplementations are encouraged to make use of these keys to represent the\nabove concepts, when necessary (for example, in a pure-JSON output form, it\nwould be necessary to represent at least message and timestamp as ordinary\nnamed values).\n\nImplementations may choose to give callers access to the underlying\nlogging implementation.  The recommended pattern for this is:\n\nLogger grants access to the sink to enable type assertions like this:\n\nCustom `With*` functions can be implemented by copying the complete\nLogger struct and replacing the sink in the copy:\n\nDon't use New to construct a new Logger with a LogSink retrieved from an\nexisting Logger. Source code attribution might not work correctly and\nunexported fields in Logger get lost.\n\nBeware that the same LogSink instance may be shared by different logger\ninstances. Calling functions that modify the LogSink will affect all of\nthose.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/go-logr/logr@v1.4.3",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/go-logr/logr",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/go-logr/logr",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: go-logr",
+            "versionInfo": "v1.4.3"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-61e261bdaf475d2f",
+            "description": "Package sprig provides template functions for Go.\n\nThis package contains a number of utility functions for working with data\ninside of Go `html/template` and `text/template` files.\n\nTo add these functions, use the `template.Funcs()` method:\n\nNote that you should add the function map before you parse any template files.\n\nSee http://masterminds.github.io/sprig/ for more detailed documentation on each of the available functions.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/go-task/slim-sprig/v3@v3.0.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/go-task/slim-sprig",
+            "licenseConcluded": "MIT AND NOASSERTION",
+            "licenseDeclared": "MIT",
+            "name": "github.com/go-task/slim-sprig/v3",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Task",
+            "versionInfo": "v3.0.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-a64fe1691e6793c4",
+            "description": "Package sprig provides template functions for Go.\n\nThis package contains a number of utility functions for working with data\ninside of Go `html/template` and `text/template` files.\n\nTo add these functions, use the `template.Funcs()` method:\n\nNote that you should add the function map before you parse any template files.\n\nSee http://masterminds.github.io/sprig/ for more detailed documentation on each of the available functions.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/go-task/slim-sprig/v3@v3.0.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/go-task/slim-sprig",
+            "licenseConcluded": "MIT AND NOASSERTION",
+            "licenseDeclared": "MIT",
+            "name": "github.com/go-task/slim-sprig/v3",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: Task",
+            "versionInfo": "v3.0.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-6659c72f0a08f594",
+            "description": "Package dbus implements bindings to the D-Bus message bus system.\n\nTo use the message bus API, you first need to connect to a bus (usually the\nsession or system bus). The acquired connection then can be used to call methods\non remote objects and emit or receive signals. Using the Export method, you can\narrange D-Bus methods calls to be directly translated to method calls on a Go\nvalue.\n\nFor outgoing messages, Go types are automatically converted to the\ncorresponding D-Bus types. See the official specification at\nhttps://dbus.freedesktop.org/doc/dbus-specification.html#type-system for more\ninformation on the D-Bus type system. The following types are directly encoded\nas their respective D-Bus equivalents:\n\nSlices and arrays encode as ARRAYs of their element type.\n\nMaps encode as DICTs, provided that their key type can be used as a key for\na DICT.\n\nStructs other than Variant and Signature encode as a STRUCT containing their\nexported fields in order. Fields whose tags contain `dbus:\"-\"` and unexported\nfields will be skipped.\n\nPointers encode as the value they're pointed to.\n\nTypes convertible to one of the base types above will be mapped as the\nbase type.\n\nTrying to encode any other type or a slice, map or struct containing an\nunsupported type will result in an InvalidTypeError.\n\nFor incoming messages, the inverse of these rules are used, with the exception\nof STRUCTs. Incoming STRUCTS are represented as a slice of empty interfaces\ncontaining the struct fields in the correct order. The Store function can be\nused to convert such values to Go structs.\n\nHandling Unix file descriptors deserves special mention. To use them, you should\nfirst check that they are supported on a connection by calling SupportsUnixFDs.\nIf it returns true, all method of Connection will translate messages containing\nUnixFD's to messages that are accompanied by the given file descriptors with the\nUnixFD values being substituted by the correct indices. Similarly, the indices\nof incoming messages are automatically resolved. It shouldn't be necessary to use\nUnixFDIndex.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/godbus/dbus/v5@v5.1.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/godbus/dbus",
+            "licenseConcluded": "BSD-2-Clause AND BSD-2-Clause AND NOASSERTION",
+            "licenseDeclared": "BSD-2-Clause",
+            "name": "github.com/godbus/dbus/v5",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: godbus",
+            "versionInfo": "v5.1.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-6e76dc35abbe80f9",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/gogo/protobuf@v1.3.2",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/gogo/protobuf",
+            "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause",
+            "licenseDeclared": "BSD-3-Clause",
+            "name": "github.com/gogo/protobuf",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: gogoprotobuf",
+            "versionInfo": "v1.3.2"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-811c42f24c8306d0",
+            "description": "Package groupcache provides a data loading mechanism with caching\nand de-duplication that works across a set of peer processes.\n\nEach data Get first consults its local cache, otherwise delegates\nto the requested key's canonical owner, which then checks its cache\nor finally gets the data.  In the common case, many concurrent\ncache misses across a set of peers for the same key result in just\none cache fill.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/golang/groupcache@v0.0.0-20210331224755-41bb18bfe9da",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/golang/groupcache",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/golang/groupcache",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Go",
+            "versionInfo": "v0.0.0-20210331224755-41bb18bfe9da"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-373eab23bf49fc7d",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/google/go-cmp@v0.7.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/google/go-cmp",
+            "licenseConcluded": "BSD-3-Clause AND LicenseRef-scancode-generic-cla",
+            "licenseDeclared": "BSD-3-Clause",
+            "name": "github.com/google/go-cmp",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Google",
+            "versionInfo": "v0.7.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-af90f6e37422b96d",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/google/go-cmp@v0.6.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/google/go-cmp",
+            "licenseConcluded": "BSD-3-Clause AND BSD-3-Clause AND NOASSERTION AND NOASSERTION",
+            "licenseDeclared": "BSD-3-Clause",
+            "name": "github.com/google/go-cmp",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: Google",
+            "versionInfo": "v0.6.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-2a3f573ad52cc737",
+            "description": "pprof is a tool for collection, manipulation and visualization\nof performance profiles.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/google/pprof@v0.0.0-20250820193118-f64d9cf942d6",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/google/pprof",
+            "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND BSD-3-Clause AND BSD-2-Clause-Views AND LicenseRef-scancode-generic-cla AND LicenseRef-scancode-unknown-license-reference",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/google/pprof",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Google",
+            "versionInfo": "v0.0.0-20250820193118-f64d9cf942d6"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-f5c46d63360cce97",
+            "description": "pprof is a tool for collection, manipulation and visualization\nof performance profiles.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/google/pprof@v0.0.0-20240727154555-813a5fbdbec8",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/google/pprof",
+            "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND NOASSERTION",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/google/pprof",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: Google",
+            "versionInfo": "v0.0.0-20240727154555-813a5fbdbec8"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-a655f66aa83d38b7",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/inconshreveable/mousetrap",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/inconshreveable/mousetrap",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: Alan Shreve",
+            "versionInfo": "v1.1.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-624e09683c0cee6f",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/insomniacslk/dhcp@v0.0.0-20240829085014-a3a4c1f04475",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/insomniacslk/dhcp",
+            "licenseConcluded": "Apache-2.0 AND BSD-3-Clause",
+            "licenseDeclared": "BSD-3-Clause",
+            "name": "github.com/insomniacslk/dhcp",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: insomniac",
+            "versionInfo": "v0.0.0-20240829085014-a3a4c1f04475"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-ed999e5eec5c2dd6",
+            "description": "Package native provides easy access to native byte order.\n\nUsage: use native.Endian where you need the native binary.ByteOrder.\n\nPlease think twice before using this package.\nIt can break program portability.\nNative byte order is usually not the right answer.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/josharian/native@v1.1.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/josharian/native",
+            "licenseConcluded": "MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/josharian/native",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v1.1.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-eee4af7cdb56fe9b",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/mattn/go-shellwords@v1.0.12",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/mattn/go-shellwords",
+            "licenseConcluded": "MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/mattn/go-shellwords",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: mattn",
+            "versionInfo": "v1.0.12"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-ab042b81edef0865",
+            "description": "Package packet provides access to Linux packet sockets (AF_PACKET).",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/mdlayher/packet@v1.1.2",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/mdlayher/packet",
+            "licenseConcluded": "MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/mdlayher/packet",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Matt Layher",
+            "versionInfo": "v1.1.2"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-224a10279edcbd71",
+            "description": "Package socket provides a low-level network connection type which integrates\nwith Go's runtime network poller to provide asynchronous I/O and deadline\nsupport.\n\nThis package focuses on UNIX-like operating systems which make use of BSD\nsockets system call APIs. It is meant to be used as a foundation for the\ncreation of operating system-specific socket packages, for socket families\nsuch as Linux's AF_NETLINK, AF_PACKET, or AF_VSOCK. This package should not\nbe used directly in end user applications.\n\nAny use of package socket should be guarded by build tags, as one would also\nuse when importing the syscall or golang.org/x/sys packages.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/mdlayher/socket@v0.5.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/mdlayher/socket",
+            "licenseConcluded": "BSD-3-Clause AND MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/mdlayher/socket",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Matt Layher",
+            "versionInfo": "v0.5.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-b6bdc1a1a09d28f6",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/networkplumbing/go-nft@v0.4.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/networkplumbing/go-nft",
+            "licenseConcluded": "NONE",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/networkplumbing/go-nft",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v0.4.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-47cee0fdc7f9b8d8",
+            "description": "Ginkgo is a testing framework for Go designed to help you write expressive tests.\nhttps://github.com/onsi/ginkgo\nMIT-Licensed\n\nThe godoc documentation outlines Ginkgo's API.  Since Ginkgo is a Domain-Specific Language it is important to\nbuild a mental model for Ginkgo - the narrative documentation at https://onsi.github.io/ginkgo/ is designed to help you do that.\nYou should start there - even a brief skim will be helpful.  At minimum you should skim through the https://onsi.github.io/ginkgo/#getting-started chapter.\n\nGinkgo's is best paired with the Gomega matcher library: https://github.com/onsi/gomega\n\nYou can run Ginkgo specs with go test - however we recommend using the ginkgo cli.  It enables functionality\nthat go test does not (especially running suites in parallel).  You can learn more at https://onsi.github.io/ginkgo/#ginkgo-cli-overview\nor by running 'ginkgo help'.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/onsi/ginkgo/v2@v2.20.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/onsi/ginkgo",
+            "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/onsi/ginkgo/v2",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: Onsi Fakhouri",
+            "versionInfo": "v2.20.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-a5a79628d8e28fad",
+            "description": "Ginkgo is a testing framework for Go designed to help you write expressive tests.\nhttps://github.com/onsi/ginkgo\nMIT-Licensed\n\nThe godoc documentation outlines Ginkgo's API.  Since Ginkgo is a Domain-Specific Language it is important to\nbuild a mental model for Ginkgo - the narrative documentation at https://onsi.github.io/ginkgo/ is designed to help you do that.\nYou should start there - even a brief skim will be helpful.  At minimum you should skim through the https://onsi.github.io/ginkgo/#getting-started chapter.\n\nGinkgo's is best paired with the Gomega matcher library: https://github.com/onsi/gomega\n\nYou can run Ginkgo specs with go test - however we recommend using the ginkgo cli.  It enables functionality\nthat go test does not (especially running suites in parallel).  You can learn more at https://onsi.github.io/ginkgo/#ginkgo-cli-overview\nor by running 'ginkgo help'.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/onsi/ginkgo/v2@v2.25.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/onsi/ginkgo",
+            "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/onsi/ginkgo/v2",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Onsi Fakhouri",
+            "versionInfo": "v2.25.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-39c75ba3ddb434ff",
+            "description": "Gomega is the Ginkgo BDD-style testing framework's preferred matcher library.\n\nThe godoc documentation describes Gomega's API.  More comprehensive documentation (with examples!) is available at http://onsi.github.io/gomega/\n\nGomega on Github: http://github.com/onsi/gomega\n\nLearn more about Ginkgo online: http://onsi.github.io/ginkgo\n\nGinkgo on Github: http://github.com/onsi/ginkgo\n\nGomega is MIT-Licensed",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/onsi/gomega@v1.38.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/onsi/gomega",
+            "licenseConcluded": "MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/onsi/gomega",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Onsi Fakhouri",
+            "versionInfo": "v1.38.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-548375ee9a65cd7c",
+            "description": "Gomega is the Ginkgo BDD-style testing framework's preferred matcher library.\n\nThe godoc documentation describes Gomega's API.  More comprehensive documentation (with examples!) is available at http://onsi.github.io/gomega/\n\nGomega on Github: http://github.com/onsi/gomega\n\nLearn more about Ginkgo online: http://onsi.github.io/ginkgo\n\nGinkgo on Github: http://github.com/onsi/ginkgo\n\nGomega is MIT-Licensed",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/onsi/gomega@v1.34.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/onsi/gomega",
+            "licenseConcluded": "MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/onsi/gomega",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: Onsi Fakhouri",
+            "versionInfo": "v1.34.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-2d4d0a5748fff569",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/opencontainers/selinux@v1.12.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/opencontainers/selinux",
+            "licenseConcluded": "Apache-2.0 AND LicenseRef-scancode-dco-1.1",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/opencontainers/selinux",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Open Container Initiative",
+            "versionInfo": "v1.12.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-fed3dffa06795dd6",
+            "description": "Package lz4 implements reading and writing lz4 compressed data.\n\nThe package supports both the LZ4 stream format,\nas specified in http://fastcompression.blogspot.fr/2013/04/lz4-streaming-format-final.html,\nand the LZ4 block format, defined at\nhttp://fastcompression.blogspot.fr/2011/05/lz4-explained.html.\n\nSee https://github.com/lz4/lz4 for the reference C implementation.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/pierrec/lz4/v4@v4.1.21",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/pierrec/lz4",
+            "licenseConcluded": "(BSD-3-Clause OR GPL-1.0-or-later) AND GPL-1.0-or-later AND GPL-2.0-only AND (MIT OR GPL-2.0-only) AND (MPL-2.0 OR GPL-2.0-only) AND NOASSERTION AND BSD-3-Clause AND NOASSERTION AND NOASSERTION",
+            "licenseDeclared": "BSD-3-Clause",
+            "name": "github.com/pierrec/lz4/v4",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Pierre Curto",
+            "versionInfo": "v4.1.21"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-c81a609c0cd16c06",
+            "description": "Package errors provides simple error handling primitives.\n\nThe traditional error handling idiom in Go is roughly akin to\n\nwhich when applied recursively up the call stack results in error reports\nwithout context or debugging information. The errors package allows\nprogrammers to add context to the failure path in their code in a way\nthat does not destroy the original value of the error.\n\nThe errors.Wrap function returns a new error that adds context to the\noriginal error by recording a stack trace at the point Wrap is called,\ntogether with the supplied message. For example\n\nIf additional control is required, the errors.WithStack and\nerrors.WithMessage functions destructure errors.Wrap into its component\noperations: annotating an error with a stack trace and with a message,\nrespectively.\n\nUsing errors.Wrap constructs a stack of errors, adding context to the\npreceding error. Depending on the nature of the error it may be necessary\nto reverse the operation of errors.Wrap to retrieve the original error\nfor inspection. Any error value which implements this interface\n\ncan be inspected by errors.Cause. errors.Cause will recursively retrieve\nthe topmost error that does not implement causer, which is assumed to be\nthe original cause. For example:\n\nAlthough the causer interface is not exported by this package, it is\nconsidered a part of its stable public interface.\n\nAll error values returned from this package implement fmt.Formatter and can\nbe formatted by the fmt package. The following verbs are supported:\n\nNew, Errorf, Wrap, and Wrapf record a stack trace at the point they are\ninvoked. This information can be retrieved with the following interface:\n\nThe returned errors.StackTrace type is defined as\n\nThe Frame type represents a call site in the stack trace. Frame supports\nthe fmt.Formatter interface that can be used for printing information about\nthe stack trace of this error. For example:\n\nAlthough the stackTracer interface is not exported by this package, it is\nconsidered a part of its stable public interface.\n\nSee the documentation for Frame.Format for more details.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/pkg/errors@v0.9.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/pkg/errors",
+            "licenseConcluded": "BSD-2-Clause",
+            "licenseDeclared": "BSD-2-Clause",
+            "name": "github.com/pkg/errors",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: pkg",
+            "versionInfo": "v0.9.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-cd5e8ad32018a8da",
+            "description": "The ethtool package aims to provide a library that provides easy access\nto the Linux SIOCETHTOOL ioctl operations. It can be used to retrieve information\nfrom a network device such as statistics, driver related information or even\nthe peer of a VETH interface.\n\nPackage ethtool  aims to provide a library giving a simple access to the\nLinux SIOCETHTOOL ioctl operations. It can be used to retrieve informations\nfrom a network device like statistics, driver related informations or\neven the peer of a VETH interface.\n\nPackage ethtool  aims to provide a library giving a simple access to the\nLinux SIOCETHTOOL ioctl operations. It can be used to retrieve informations\nfrom a network device like statistics, driver related informations or\neven the peer of a VETH interface.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/safchain/ethtool@v0.6.2",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/safchain/ethtool",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/safchain/ethtool",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Sylvain Afchain",
+            "versionInfo": "v0.6.2"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-67ee6dc4987f570f",
+            "description": "Package logrus is a structured logger for Go, completely API compatible with the standard library logger.\n\nThe simplest way to use Logrus is simply the package-level exported logger:\n\nOutput:\n\nFor a full guide visit https://github.com/sirupsen/logrus\n\n\nAn example on how to use a hook",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/sirupsen/logrus@v1.9.3",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/sirupsen/logrus",
+            "licenseConcluded": "MIT",
+            "licenseDeclared": "MIT",
+            "name": "github.com/sirupsen/logrus",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Simon Eskildsen",
+            "versionInfo": "v1.9.3"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-882f223fd4b49128",
+            "description": "Package cobra is a commander providing a simple interface to create powerful modern CLI interfaces.\nIn addition to providing an interface, Cobra simultaneously provides a controller to organize your application code.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/spf13/cobra@v1.9.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/spf13/cobra",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/spf13/cobra",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: Steve Francia",
+            "versionInfo": "v1.9.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-ea835db4138d769b",
+            "description": "Package pflag is a drop-in replacement for Go's flag package, implementing\nPOSIX/GNU-style --flags.\n\npflag is compatible with the GNU extensions to the POSIX recommendations\nfor command-line options. See\nhttp://www.gnu.org/software/libc/manual/html_node/Argument-Syntax.html\n\nUsage:\n\npflag is a drop-in replacement of Go's native flag package. If you import\npflag under the name \"flag\" then all code should continue to function\nwith no changes.\n\nThere is one exception to this: if you directly instantiate the Flag struct\nthere is one more field \"Shorthand\" that you will need to set.\nMost code never instantiates this struct directly, and instead uses\nfunctions such as String(), BoolVar(), and Var(), and is therefore\nunaffected.\n\nDefine flags using flag.String(), Bool(), Int(), etc.\n\nThis declares an integer flag, -flagname, stored in the pointer ip, with type *int.\n\nIf you like, you can bind the flag to a variable using the Var() functions.\n\nOr you can create custom flags that satisfy the Value interface (with\npointer receivers) and couple them to flag parsing by\n\nFor such flags, the default value is just the initial value of the variable.\n\nAfter all flags are defined, call\n\nto parse the command line into the defined flags.\n\nFlags may then be used directly. If you're using the flags themselves,\nthey are all pointers; if you bind to variables, they're values.\n\nAfter parsing, the arguments after the flag are available as the\nslice flag.Args() or individually as flag.Arg(i).\nThe arguments are indexed from 0 through flag.NArg()-1.\n\nThe pflag package also defines some new functions that are not in flag,\nthat give one-letter shorthands for flags. You can use these by appending\n'P' to the name of any function that defines a flag.\n\nShorthand letters can be used with single dashes on the command line.\nBoolean shorthand flags can be combined with other shorthand flags.\n\nCommand line flag syntax:\n\nUnlike the flag package, a single dash before an option means something\ndifferent than a double dash. Single dashes signify a series of shorthand\nletters for flags. All but the last shorthand letter must be boolean flags.\n\nFlag parsing stops after the terminator \"--\". Unlike the flag package,\nflags can be interspersed with arguments anywhere on the command line\nbefore this terminator.\n\nInteger flags accept 1234, 0664, 0x1234 and may be negative.\nBoolean flags (in their long form) accept 1, 0, t, f, true, false,\nTRUE, FALSE, True, False.\nDuration flags accept any input valid for time.ParseDuration.\n\nThe default set of command-line flags is controlled by\ntop-level functions.  The FlagSet type allows one to define\nindependent sets of flags, such as to implement subcommands\nin a command-line interface. The methods of FlagSet are\nanalogous to the top-level functions for the command-line\nflag set.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/spf13/pflag@v1.0.6",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/spf13/pflag",
+            "licenseConcluded": "BSD-3-Clause",
+            "licenseDeclared": "BSD-3-Clause",
+            "name": "github.com/spf13/pflag",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: Steve Francia",
+            "versionInfo": "v1.0.6"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-7428dd3d6bc203fc",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/u-root/uio@v0.0.0-20240224005618-d2acac8f3701",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/u-root/uio",
+            "licenseConcluded": "BSD-3-Clause",
+            "licenseDeclared": "BSD-3-Clause",
+            "name": "github.com/u-root/uio",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v0.0.0-20240224005618-d2acac8f3701"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-674d175e7f2fe913",
+            "description": "Package netlink provides a simple library for netlink. Netlink is\nthe interface a user-space program in linux uses to communicate with\nthe kernel. It can be used to add and remove interfaces, set up ip\naddresses and routes, and confiugre ipsec. Netlink communication\nrequires elevated privileges, so in most cases this code needs to\nbe run as root. The low level primitives for netlink are contained\nin the nl subpackage. This package attempts to provide a high-level\ninterface that is loosly modeled on the iproute2 cli.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/vishvananda/netlink@v1.3.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/vishvananda/netlink",
+            "licenseConcluded": "Apache-2.0 AND BSD-3-Clause",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/vishvananda/netlink",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Vish (Ishaya) Abrams",
+            "versionInfo": "v1.3.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-23431fb807511967",
+            "description": "Package netns allows ultra-simple network namespace handling. NsHandles\ncan be retrieved and set. Note that the current namespace is thread\nlocal so actions that set and reset namespaces should use LockOSThread\nto make sure the namespace doesn't change due to a goroutine switch.\nIt is best to close NsHandles when you are done with them. This can be\naccomplished via a `defer ns.Close()` on the handle. Changing namespaces\nrequires elevated privileges, so in most cases this code needs to be run\nas root.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/vishvananda/netns@v0.0.5",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/vishvananda/netns",
+            "licenseConcluded": "NONE",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/vishvananda/netns",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Vish (Ishaya) Abrams",
+            "versionInfo": "v0.0.5"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-2713c7b1e7e42ae3",
+            "description": "Package netns allows ultra-simple network namespace handling. NsHandles\ncan be retrieved and set. Note that the current namespace is thread\nlocal so actions that set and reset namespaces should use LockOSThread\nto make sure the namespace doesn't change due to a goroutine switch.\nIt is best to close NsHandles when you are done with them. This can be\naccomplished via a `defer ns.Close()` on the handle. Changing namespaces\nrequires elevated privileges, so in most cases this code needs to be run\nas root.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/vishvananda/netns@v0.0.4",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/vishvananda/netns",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/vishvananda/netns",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: Vish (Ishaya) Abrams",
+            "versionInfo": "v0.0.4"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-e59cff333f358323",
+            "description": "Package netns allows ultra-simple network namespace handling. NsHandles\ncan be retrieved and set. Note that the current namespace is thread\nlocal so actions that set and reset namespaces should use LockOSThread\nto make sure the namespace doesn't change due to a goroutine switch.\nIt is best to close NsHandles when you are done with them. This can be\naccomplished via a `defer ns.Close()` on the handle. Changing namespaces\nrequires elevated privileges, so in most cases this code needs to be run\nas root.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/vishvananda/netns@v0.0.4",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/vishvananda/netns",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "github.com/vishvananda/netns",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/plugins/debug/go.mod",
+            "supplier": "Organization: Vish (Ishaya) Abrams",
+            "versionInfo": "v0.0.4"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-5eb4b3e4207de44d",
+            "description": "Package opencensus contains Go support for OpenCensus.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/go.opencensus.io@v0.24.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/census-instrumentation/opencensus-go",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "go.opencensus.io",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: OpenCensus",
+            "versionInfo": "v0.24.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-84ed4f27246f4de",
+            "description": "Package automaxprocs automatically sets GOMAXPROCS to match the Linux\ncontainer CPU quota, if any.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/go.uber.org/automaxprocs@v1.6.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/uber-go/automaxprocs",
+            "licenseConcluded": "MIT AND NOASSERTION",
+            "licenseDeclared": "MIT",
+            "name": "go.uber.org/automaxprocs",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Uber Go",
+            "versionInfo": "v1.6.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-7055c384fc18a597",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/go.yaml.in/yaml/v3@v3.0.4",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0 AND MIT AND MIT AND (MIT AND Apache-2.0) AND MIT AND Apache-2.0",
+            "licenseDeclared": "Apache-2.0 AND MIT",
+            "name": "go.yaml.in/yaml/v3",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v3.0.4"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-7c80f677490246eb",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/exp@v0.0.0-20240719175910-8a7402abbf56",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/exp",
+            "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND NOASSERTION",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/exp",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "versionInfo": "v0.0.0-20240719175910-8a7402abbf56"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-c89f41c9e68a9bc3",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/net@v0.28.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/net",
+            "licenseConcluded": "Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND BSD-3-Clause AND BSD-3-Clause AND NOASSERTION AND NOASSERTION",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/net",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "versionInfo": "v0.28.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-f19273c015b3c461",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/net@v0.43.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/net",
+            "licenseConcluded": "BSD-3-Clause AND BSD-3-Clause AND BSD-2-Clause AND LicenseRef-scancode-google-patent-license-golang AND W3C-19980720 AND BSD-3-Clause",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/net",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v0.43.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-2851559a8cd36c52",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/sync@v0.16.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/sync",
+            "licenseConcluded": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/sync",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v0.16.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-3e39a374ba1e613e",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/sys@v0.23.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/sys",
+            "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND NOASSERTION",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/sys",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "versionInfo": "v0.23.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-db2f28f6a89bbc74",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/sys@v0.15.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/sys",
+            "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND NOASSERTION",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/sys",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/plugins/debug/go.mod",
+            "versionInfo": "v0.15.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-fbd294917e90daa",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/sys@v0.35.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/sys",
+            "licenseConcluded": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang AND LicenseRef-scancode-proprietary-license",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/sys",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v0.35.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-182b329ee476010",
+            "description": "text is a repository of text-related packages related to internationalization\n(i18n) and localization (l10n), such as character encodings, text\ntransformations, and locale-specific text handling.\n\nThere is a 30 minute video, recorded on 2017-11-30, on the \"State of\ngolang.org/x/text\" at https://www.youtube.com/watch?v=uYrDrMEGu58",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/text@v0.28.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/text",
+            "licenseConcluded": "BSD-3-Clause AND BSD-3-Clause AND CC-BY-SA-3.0 AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-2.5 AND BSD-3-Clause AND CC-BY-SA-3.0 AND CC-BY-SA-2.5 AND CC-BY-SA-1.0 AND LicenseRef-scancode-google-patent-license-golang",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/text",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v0.28.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-ac20bfdc32e73441",
+            "description": "text is a repository of text-related packages related to internationalization\n(i18n) and localization (l10n), such as character encodings, text\ntransformations, and locale-specific text handling.\n\nThere is a 30 minute video, recorded on 2017-11-30, on the \"State of\ngolang.org/x/text\" at https://www.youtube.com/watch?v=uYrDrMEGu58",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/text@v0.17.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/text",
+            "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-2.5 AND CC-BY-SA-3.0 AND BSD-3-Clause AND CC-BY-SA-1.0 AND CC-BY-SA-2.0 AND CC-BY-SA-3.0 AND NOASSERTION",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/text",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "versionInfo": "v0.17.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-66ce4391210cb356",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/tools@v0.24.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/tools",
+            "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND MIT AND NOASSERTION",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/tools",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "versionInfo": "v0.24.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-91f94d83bbe9d80f",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/golang.org/x/tools@v0.36.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://cs.opensource.google/go/x/tools",
+            "licenseConcluded": "(CC-BY-4.0 AND MIT) AND BSD-3-Clause AND Apache-2.0 AND BSD-3-Clause AND BSD-3-Clause AND MIT AND LicenseRef-scancode-google-patent-license-golang AND MIT",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "golang.org/x/tools",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "versionInfo": "v0.36.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-a6b43a0334f06de1",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/google.golang.org/genproto/googleapis/rpc@v0.0.0-20241015192408-796eee8c2d53",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/googleapis/go-genproto",
+            "licenseConcluded": "Apache-2.0",
+            "licenseDeclared": "Apache-2.0",
+            "name": "google.golang.org/genproto/googleapis/rpc",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Google APIs",
+            "versionInfo": "v0.0.0-20241015192408-796eee8c2d53"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-759bd41c9a83cc1c",
+            "description": "Package grpc implements an RPC system called gRPC.\n\nSee grpc.io for more information about gRPC.",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/google.golang.org/grpc@v1.69.0",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/grpc/grpc-go",
+            "licenseConcluded": "Apache-2.0 AND LicenseRef-scancode-generic-cla",
+            "licenseDeclared": "Apache-2.0",
+            "name": "google.golang.org/grpc",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: grpc",
+            "versionInfo": "v1.69.0"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-f832ba718a63b12d",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/google.golang.org/protobuf@v1.36.7",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/protocolbuffers/protobuf-go",
+            "licenseConcluded": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "licenseDeclared": "BSD-3-Clause AND LicenseRef-scancode-google-patent-license-golang",
+            "name": "google.golang.org/protobuf",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Protocol Buffers",
+            "versionInfo": "v1.36.7"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-8adc4fba6e1a9889",
+            "description": "Package yaml implements YAML support for the Go language.\n\nSource code and other details for the project are available at GitHub:",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/gopkg.in/yaml.v3@v3.0.1",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/go-yaml/yaml",
+            "licenseConcluded": "Apache-2.0 AND Apache-2.0 AND MIT AND MIT",
+            "licenseDeclared": "Apache-2.0",
+            "name": "gopkg.in/yaml.v3",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: cni/go.mod",
+            "supplier": "Organization: go-yaml",
+            "versionInfo": "v3.0.1"
+        },
+        {
+            "SPDXID": "SPDXRef-Package-e59b627eef0804fd",
+            "downloadLocation": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:golang/sigs.k8s.io/knftables@v0.0.18",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "homepage": "https://github.com/kubernetes-sigs/knftables",
+            "licenseConcluded": "Apache-2.0 AND LicenseRef-scancode-generic-cla",
+            "licenseDeclared": "Apache-2.0",
+            "name": "sigs.k8s.io/knftables",
+            "primaryPackagePurpose": "LIBRARY",
+            "sourceInfo": "package found in: plugins/go.mod",
+            "supplier": "Organization: Kubernetes SIGs",
+            "versionInfo": "v0.0.18"
+        },
+        {
+            "SPDXID": "SPDXRef-Filesystem-7cf8725a9a40d8b4",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0 AND (Apache-2.0 AND MIT) AND BSD-2-Clause AND BSD-3-Clause AND MIT",
+            "licenseDeclared": "Apache-2.0",
+            "name": "cncf.cni",
+            "primaryPackagePurpose": "SOURCE",
+            "supplier": "Organization: Linux Foundation Project cncf",
+            "versionInfo": "2025-11"
+        },
+        {
+            "SPDXID": "SPDXRef-cncf-cni-cni",
+            "comment": "This package was added to the Trivy analysis for the cni by the Scaffold tool SBOM augmentation",
+            "downloadLocation": "https://github.com/containernetworking/cni/archive/1d67f89a2e3cfc3c22da74d4f8490e65ca4a819c.zip",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:github/containernetworking/cni@1d67f89a2e3cfc3c22da74d4f8490e65ca4a819c",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0 AND (Apache-2.0 AND MIT) AND BSD-2-Clause AND BSD-3-Clause AND MIT",
+            "licenseDeclared": "Apache-2.0",
+            "name": "cni",
+            "primaryPackagePurpose": "SOURCE",
+            "sourceInfo": "The source this package was part of the LF Scanning configuration for the project cncf",
+            "supplier": "Organization: Linux Foundation Project cncf",
+            "versionInfo": "1d67f89a2e3cfc3c22da74d4f8490e65ca4a819c"
+        },
+        {
+            "SPDXID": "SPDXRef-cncf-cni-plugins",
+            "comment": "This package was added to the Trivy analysis for the plugins by the Scaffold tool SBOM augmentation",
+            "downloadLocation": "https://github.com/containernetworking/plugins/archive/9b3772e1a7abf93cbb7c6526a28bc0d27b830e02.zip",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:github/containernetworking/plugins@9b3772e1a7abf93cbb7c6526a28bc0d27b830e02",
+                    "referenceType": "purl"
+                }
+            ],
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0 AND (Apache-2.0 AND MIT) AND BSD-2-Clause AND BSD-3-Clause AND MIT",
+            "licenseDeclared": "Apache-2.0",
+            "name": "plugins",
+            "primaryPackagePurpose": "SOURCE",
+            "sourceInfo": "The source this package was part of the LF Scanning configuration for the project cncf",
+            "supplier": "Organization: Linux Foundation Project cncf",
+            "versionInfo": "9b3772e1a7abf93cbb7c6526a28bc0d27b830e02"
+        }
+    ],
+    "relationships": [
+        {
+            "spdxElementId": "SPDXRef-Application-21c7ef0e0f301999",
+            "relatedSpdxElement": "SPDXRef-Package-6a42f531f68042f4",
+            "relationshipType": "CONTAINS"
+        },
+        {
+            "spdxElementId": "SPDXRef-Application-5729e2edc4de9a9a",
+            "relatedSpdxElement": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relationshipType": "CONTAINS"
+        },
+        {
+            "spdxElementId": "SPDXRef-Application-cb29fc947ca39e9b",
+            "relatedSpdxElement": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relationshipType": "CONTAINS"
+        },
+        {
+            "spdxElementId": "SPDXRef-cncf-cni-cni",
+            "relatedSpdxElement": "SPDXRef-Application-21c7ef0e0f301999",
+            "relationshipType": "CONTAINS"
+        },
+        {
+            "spdxElementId": "SPDXRef-cncf-cni-plugins",
+            "relatedSpdxElement": "SPDXRef-Application-5729e2edc4de9a9a",
+            "relationshipType": "CONTAINS"
+        },
+        {
+            "spdxElementId": "SPDXRef-cncf-cni-cni",
+            "relatedSpdxElement": "SPDXRef-Application-cb29fc947ca39e9b",
+            "relationshipType": "CONTAINS"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-182b329ee476010",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-1da011f8a9ece165",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-224a10279edcbd71",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-23431fb807511967",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-2851559a8cd36c52",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-2a3f573ad52cc737",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-2d4d0a5748fff569",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-39c75ba3ddb434ff",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-5a622b098115711a",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-5eb4b3e4207de44d",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-60294d02b4fa504b",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-61e261bdaf475d2f",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-624e09683c0cee6f",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-6659c72f0a08f594",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-674d175e7f2fe913",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-67ee6dc4987f570f",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-6e76dc35abbe80f9",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-7055c384fc18a597",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-7428dd3d6bc203fc",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-84ed4f27246f4de",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-89d03928d3b27efd",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-91f94d83bbe9d80f",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-a5a79628d8e28fad",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-a70baa15054f185e",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-ab042b81edef0865",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-b162dd03b91d57b6",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-b6bdc1a1a09d28f6",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-c81a609c0cd16c06",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-cd5e8ad32018a8da",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-d361789b13babfb1",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-d3b9caf8ea5fb371",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-d752623552ba9492",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-ddb674046c968d63",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-e59b627eef0804fd",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-ecc063c24fd67f59",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-ed999e5eec5c2dd6",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-eee4af7cdb56fe9b",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-fbd294917e90daa",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-24aa2275c15f4c6a",
+            "relatedSpdxElement": "SPDXRef-Package-fed3dffa06795dd6",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-2d4d0a5748fff569",
+            "relatedSpdxElement": "SPDXRef-Package-fbd294917e90daa",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-5eb4b3e4207de44d",
+            "relatedSpdxElement": "SPDXRef-Package-373eab23bf49fc7d",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-5eb4b3e4207de44d",
+            "relatedSpdxElement": "SPDXRef-Package-759bd41c9a83cc1c",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-5eb4b3e4207de44d",
+            "relatedSpdxElement": "SPDXRef-Package-811c42f24c8306d0",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-5eb4b3e4207de44d",
+            "relatedSpdxElement": "SPDXRef-Package-f19273c015b3c461",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-60294d02b4fa504b",
+            "relatedSpdxElement": "SPDXRef-Package-759bd41c9a83cc1c",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-60294d02b4fa504b",
+            "relatedSpdxElement": "SPDXRef-Package-a6b43a0334f06de1",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-60294d02b4fa504b",
+            "relatedSpdxElement": "SPDXRef-Package-c87a2a8a63514c7e",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-60294d02b4fa504b",
+            "relatedSpdxElement": "SPDXRef-Package-d7d5cd70153403a5",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-60294d02b4fa504b",
+            "relatedSpdxElement": "SPDXRef-Package-f832ba718a63b12d",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-67ee6dc4987f570f",
+            "relatedSpdxElement": "SPDXRef-Package-fbd294917e90daa",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-6a42f531f68042f4",
+            "relatedSpdxElement": "SPDXRef-Package-a0bbca957cd19d04",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-6a42f531f68042f4",
+            "relatedSpdxElement": "SPDXRef-Package-db2f28f6a89bbc74",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-6a42f531f68042f4",
+            "relatedSpdxElement": "SPDXRef-Package-e59cff333f358323",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-1b0a60773dbe4111",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-2713c7b1e7e42ae3",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-3e39a374ba1e613e",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-47cee0fdc7f9b8d8",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-548375ee9a65cd7c",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-66ce4391210cb356",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-7c80f677490246eb",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-882f223fd4b49128",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-a64fe1691e6793c4",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-ac20bfdc32e73441",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-af90f6e37422b96d",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-c89f41c9e68a9bc3",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-73f88aa2d7c24dc7",
+            "relatedSpdxElement": "SPDXRef-Package-f5c46d63360cce97",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-882f223fd4b49128",
+            "relatedSpdxElement": "SPDXRef-Package-8adc4fba6e1a9889",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-882f223fd4b49128",
+            "relatedSpdxElement": "SPDXRef-Package-a655f66aa83d38b7",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-Package-882f223fd4b49128",
+            "relatedSpdxElement": "SPDXRef-Package-ea835db4138d769b",
+            "relationshipType": "DEPENDS_ON"
+        },
+        {
+            "spdxElementId": "SPDXRef-DOCUMENT",
+            "relatedSpdxElement": "SPDXRef-Filesystem-7cf8725a9a40d8b4",
+            "relationshipType": "DESCRIBES"
+        },
+        {
+            "spdxElementId": "SPDXRef-Filesystem-7cf8725a9a40d8b4",
+            "relatedSpdxElement": "SPDXRef-cncf-cni-cni",
+            "relationshipType": "CONTAINS"
+        },
+        {
+            "spdxElementId": "SPDXRef-Filesystem-7cf8725a9a40d8b4",
+            "relatedSpdxElement": "SPDXRef-cncf-cni-plugins",
+            "relationshipType": "CONTAINS"
+        }
+    ]
+}
